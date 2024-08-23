@@ -94,7 +94,7 @@ export default function BasicsDiaglog() {
         </Button>
       </Box>
       <Dialog
-        TransitionComponent={Transition}
+        // TransitionComponent={Transition}
         open={openDialog2}
         onClose={handleCloseDialog2}
         fullScreen>

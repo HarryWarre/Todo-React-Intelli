@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 
 import BasicInput from "./InputForm";
-import ListCard from "../ListCard";
+import ListCard from "./ListCard";
 import BasicsDiaglog from "./DialogBasics";
 import BasicsTooltips from "./Tooltips";
 

@@ -1,9 +1,21 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { Typography } from "@mui/material";
-
+import { Button, styled, Typography } from "@mui/material";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 export default function BasicInput() {
+  const VisuallyHiddenInput = styled("input")({
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
+    height: 1,
+    overflow: "hidden",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    whiteSpace: "nowrap",
+    width: 1,
+  });
+
   return (
     <>
       <Typography level='h3'>Basic TextField</Typography>
@@ -93,6 +105,25 @@ export default function BasicInput() {
             helperText='Some important text'
           />
         </div>
+      </Box>
+
+      <Box
+        component='form'
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete='off'>
+        {/* Button upload img */}
+        <Button
+          component='label'
+          role={undefined}
+          variant='contained'
+          tabIndex={1}
+          startIcon={<CloudUploadIcon />}>
+          Upload File
+          <VisuallyHiddenInput type='file' />
+        </Button>
       </Box>
     </>
   );

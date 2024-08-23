@@ -77,8 +77,10 @@ export default function BasicsDiaglog() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseDiaglog1}>Disagree</Button>
-          <Button onClick={handleClickAgreeDialog1} autoFocus>
+          <Button color='error' onClick={handleCloseDiaglog1}>
+            Disagree
+          </Button>
+          <Button color='success' onClick={handleClickAgreeDialog1} autoFocus>
             Agree
           </Button>
         </DialogActions>
